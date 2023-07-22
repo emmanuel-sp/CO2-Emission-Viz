@@ -16,14 +16,17 @@ public class Company {
 
     private Double co2emissions;
 
+    private String sector;
+
     public Company() {
 
     }
 
-    public Company(Long id, String name, Double co2emissions) {
+    public Company(Long id, String name, Double co2emissions, String sector) {
         this.id = id;
         this.name = name;
         this.co2emissions = co2emissions;
+        this.sector = sector;
     }
 
     public Long getId() {
@@ -48,5 +51,13 @@ public class Company {
 
     public void setCo2emissions(Double co2emissions) {
         this.co2emissions = co2emissions;
+    }
+
+    public String getSector() {
+        return sector;
+    }
+
+    public void setSector(String sector) {
+        this.sector = sector;
     }
 }
