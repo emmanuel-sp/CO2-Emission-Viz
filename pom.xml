@@ -17,6 +17,12 @@
 		<java.version>20</java.version>
 		<vaadin.version>24.1.2</vaadin.version>
 	</properties>
+	<repositories>
+		<repository>
+			<id>vaadin-addons</id>
+			<url>https://maven.vaadin.com/vaadin-addons</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -33,9 +39,19 @@
 		<dependency>
 			<groupId>com.vaadin</groupId>
 			<artifactId>vaadin-spring-boot-starter</artifactId>
-			<version>24.0.0</version>
+			<version>24.1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-maven-plugin</artifactId>
+			<version>23.2.1</version>
 		</dependency>
 
+		<dependency>
+			<groupId>com.vaadin</groupId>
+			<artifactId>vaadin-charts-flow</artifactId>
+			<version>6.0.0</version>
+		</dependency>
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
@@ -76,7 +92,7 @@
 					<plugin>
 						<groupId>com.vaadin</groupId>
 						<artifactId>vaadin-maven-plugin</artifactId>
-						<version>${vaadin.version}</version>
+						<version>23.2.1</version>
 						<executions>
 							<execution>
 								<id>frontend</id>

@@ -19,4 +19,5 @@ public class CompanyController {
     public ResponseEntity getAllCompanies() {
         return ResponseEntity.ok(this.companyRepository.findAll());
     }
+
 }
