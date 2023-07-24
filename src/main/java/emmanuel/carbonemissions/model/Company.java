@@ -1,6 +1,5 @@
 package emmanuel.carbonemissions.model;
 
-import emmanuel.carbonemissions.datatypes.Sector;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,16 +16,17 @@ public class Company {
 
     private String sector;
 
-
+    private int year;
     public Company() {
 
     }
 
-    public Company(Long id, String name, Double co2emissions, String sector) {
+    public Company(Long id, String name, Double co2emissions, String sector, int year) {
         this.id = id;
         this.name = name;
         this.co2emissions = co2emissions;
         this.sector = sector;
+        this.year = year;
     }
 
     public Long getId() {
@@ -59,5 +59,13 @@ public class Company {
 
     public void setSector(String sector) {
         this.sector = sector;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
     }
 }

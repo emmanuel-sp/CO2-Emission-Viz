@@ -1,6 +1,5 @@
 package emmanuel.carbonemissions.controller;
 
-import emmanuel.carbonemissions.datatypes.Sector;
 import emmanuel.carbonemissions.model.Company;
 import emmanuel.carbonemissions.repository.CompanyRepository;
 import org.springframework.http.ResponseEntity;
