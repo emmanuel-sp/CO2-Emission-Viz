@@ -1,5 +1,6 @@
 package emmanuel.carbonemissions.model;
 
+import emmanuel.carbonemissions.datatypes.Sector;
 import jakarta.persistence.*;
 
 @Entity
@@ -15,6 +16,7 @@ public class Company {
     private Double co2emissions;
 
     private String sector;
+
 
     public Company() {
 

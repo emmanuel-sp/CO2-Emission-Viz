@@ -1,10 +1,15 @@
 package emmanuel.carbonemissions.controller;
 
+import emmanuel.carbonemissions.datatypes.Sector;
+import emmanuel.carbonemissions.model.Company;
 import emmanuel.carbonemissions.repository.CompanyRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/company")
@@ -13,11 +18,13 @@ public class CompanyController {
 
     public CompanyController(CompanyRepository companyRepository) {
         this.companyRepository = companyRepository;
+
     }
 
     @GetMapping
-    public ResponseEntity getAllCompanies() {
-        return ResponseEntity.ok(this.companyRepository.findAll());
+    public List<Company> getAllCompanies() {
+        return this.companyRepository.findAll();
+
     }
 
 }
